@@ -1,0 +1,6 @@
+node_modules
+.dotrun.json
+
+# local configuration
+.env.*.local
+.env.local
