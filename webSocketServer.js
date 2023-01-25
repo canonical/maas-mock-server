@@ -52,6 +52,9 @@ async function main(getMockData) {
   webSocketServer.on("connection", async function connection(ws) {
     console.log(messages.connected());
 
+    ws.on("close", async function close() {
+      ws.close(1000);
+    });
     ws.on("message", async function message(data) {
       const dataString = data.toString();
 
